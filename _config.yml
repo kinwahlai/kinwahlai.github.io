@@ -6,6 +6,7 @@ description: My journey to become a master in software craftsmanship.
 logo: site-logo.png 
 search: true
 url: "http://thejourneytomastery.com" 
+#url: "http://localhost" 
 
 
 # Jekyll configuration
@@ -35,7 +36,7 @@ owner:
   name: Darren Lai
   avatar: "https://avatars2.githubusercontent.com/u/1986672?v=2&s=460"
   email: kinwah.lai@gmail.com
-  disqus-shortname: darrenlai
+  disqus-shortname: "darrenkwlai"
   twitter: darrenkwlai
   facebook: kinwah.lai
   github: kinwahlai
