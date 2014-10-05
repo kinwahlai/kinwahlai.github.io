@@ -91,8 +91,7 @@ Comparing to the complex Objective-c-style method, swift function has a simpler 
 func funcName( parameters ) -> returnType { }
 func funcName( externalParameterName localParameterName: Int ) { }
 </code></pre>
-<pre><code>
-func sayHello(#name:String) {
+<pre><code>func sayHello(#name:String) {
   func createGreeting() -> String {
     return "Hello, \(name)"
   }
