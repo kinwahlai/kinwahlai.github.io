@@ -3,9 +3,9 @@
 title: The journey to mastery
 locale: en_US
 description: My journey to become a master in software craftsmanship.
-logo: site-logo.png 
+logo: site-logo.png
 search: true
-url: "http://www.thejourneytomastery.com" 
+url: "http://www.thejourneytomastery.com"
 
 
 # Jekyll configuration
@@ -49,5 +49,22 @@ owner:
     analytics: UA-54894595-1
     verify:
     ad-client:
-    ad-slot: 
+    ad-slot:
   bing-verify:
+
+#Octopress configuration
+# Default extensions
+post_ext: md
+page_ext: md
+
+# Found in _templates/
+post_layout: post
+page_layout: page
+
+# Format titles with titlecase?
+titlecase: true
+
+# Change default template file (in _templates/)
+post_template: post
+page_template: page
+draft_template: post
