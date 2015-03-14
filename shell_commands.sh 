@@ -1,11 +1,9 @@
 #!/bin/sh
 
-bundle install 
+bundle install
 
 npm install
 
 bundle exec jekyll serve --config localhost_config.yml
 
-
-
-
+bundle exec octopress new post "Post title" --dir blog --config _octopress.yml
