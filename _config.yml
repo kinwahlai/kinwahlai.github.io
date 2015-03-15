@@ -5,7 +5,7 @@ locale: en_US
 description: My journey to become a master in software craftsmanship.
 logo: site-logo.png
 search: true
-url: "http://www.thejourneytomastery.com"
+url: http://www.thejourneytomastery.com
 
 
 # Jekyll configuration

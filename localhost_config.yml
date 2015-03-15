@@ -3,9 +3,9 @@
 title: The journey to mastery
 locale: en_US
 description: My journey to become a master in software craftsmanship.
-logo: site-logo.png 
+logo: site-logo.png
 search: true
-url: "http://0.0.0.0:4000" 
+url: http://0.0.0.0:4000
 
 
 # Jekyll configuration
@@ -49,5 +49,5 @@ owner:
     analytics: UA-54894595-1
     verify:
     ad-client:
-    ad-slot: 
+    ad-slot:
   bing-verify:
