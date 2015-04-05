@@ -4,10 +4,12 @@ bundle install
 
 npm install
 
-bundle exec jekyll serve --config localhost_config.yml
+bundle exec jekyll serve
+
+bundle exec jekyll serve --drafts
 
 bundle exec octopress new post "Post title" --dir blog
 
 bundle exec octopress new draft "Post title"
 
-bundle exec octopress publish "Post title" --dir blog
+bundle exec octopress publish "post-title" --dir blog
