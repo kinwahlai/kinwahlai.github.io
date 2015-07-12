@@ -15,7 +15,7 @@ image:
 I set on a quest to reduce the Grails cucumber/functional test time, I noticed there are a lot of login and logout actions.
 These 2 actions seem very simple and cheap, but it will be very costly when you have many cases/scenarios and involving a few clicks on the Geb Page every time.
 
-So i ask myself what i want? And my answer is "I wish i can do like given user already login to the system, then i can straight away perform the test i want and not distracted by the login steps." I tried to understand from the team, why must we logout for every test? Their answer is not really a must but it helps to ensure that no residual effect from previous test.
+I wish the test in future can be simpler like this; Given user already login to the system, then i can straight away perform the test i want and not distracted by the login steps. For the logout part, I tried to understand from the team, why must we logout for every test? Their answer is not really a must but it helps to ensure that no residual effect from previous test.
 
 ### What are my options?
 
@@ -27,7 +27,7 @@ Another option is using the Remember Me functionality. I want to "trick" the sys
 2. Pass the request to RememberMeServices to process the cookie and login.
 3. Set the authentication into the security context and continue on the filter chain.
 
-So this post is to show you how to create your own custom RememberMeServices and setting up the service.
+So this post is to show how to create a custom RememberMeServices, setting up the service and using the service.
 
 ### Creating custom RememberMeServices
 
@@ -64,7 +64,7 @@ protected String encodeCookie(String[] cookieTokens) {
 }
 ~~~
 
-Cool, so now i have the custom auto login service, how can i use this service? Well, it turn out to be quite simple, thanks to the example code i found in `SpringSecurityCoreGrailsPlugin.groovy`. All you need to do is "wire" the service in the Grails `resources.groovy` file.
+Cool, so now i have the custom RememberMeServices, how can i use this service? Well, it turn out to be quite simple, thanks to the example code i found in `SpringSecurityCoreGrailsPlugin.groovy`. All you need to do is "wire" the service in the Grails `resources.groovy` file.
 
 ~~~ groovy
 if (SpringSecurityUtils.securityConfig.FTRememberMeService.load) {
@@ -84,7 +84,7 @@ If you notice, I wrap the loading of my custom RememberMeServices with a config 
 
 ### Using the new service with Geb
 
-Ok, the Grails service is ready now, how do auto login my Geb browser? For me, i created this method in my cucumber World.
+Ok, the Grails service is ready now, how do auto login my Geb browser? For me, i created the method below in my cucumber World. I tried to address the logout issue by deleting all cookies. This will ensure that new session id created for new login.
 
 ~~~ groovy
 public void injectLoginCookie(String username, String password = "pass") {
@@ -94,7 +94,7 @@ public void injectLoginCookie(String username, String password = "pass") {
 }
 ~~~
 
-Before accessing a secured page, i call this `injectLoginCookie` method. Like the snippet below. **NOTES**: You will see this exception if you try to inject cookie  to a new browser that did not go to any page yet. So `go "/version"` is to set the browser's currentUrl to a valid url.
+Before accessing a secured page, i call `injectLoginCookie` method. Like the snippet below. **NOTES**: You will see this exception if you try to inject cookie to a new browser that did not go to any page yet. So `go "/version"` is to set the browser's currentUrl to a valid url and to avoid the exception.
 
 > org.openqa.selenium.WebDriverException: <unknown>: Failed to set the 'cookie' property on 'Document': Cookies are disabled inside 'data:' URLs.
 
