@@ -21,7 +21,7 @@ find a simpler solution to the problem, or even break down problem into smaller 
 
 PB are in ODDE, estimation helps PO to make decision which item/story to have 1st.
 *** ?estimation also show us what compromise we making, grouping of story as a feature (may include low value item)
-
+estimation separate the size from the duration.
 
 
 What if we dont estimate, what will happen?
