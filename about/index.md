@@ -3,7 +3,7 @@ layout: page
 title: About Darren
 excerpt: ""
 image:
-  feature: Singapore.jpg
+  feature: Singapore.JPG
 ---
 
 I start my career as a software engineer in a software company call Buzznet in Kuala Lumpur. I mainly work on Java and Oracle DB.
