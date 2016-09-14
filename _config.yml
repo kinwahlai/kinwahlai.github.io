@@ -12,7 +12,11 @@ search: true
 
 permalink:   /:categories/:title/
 markdown:    kramdown
-highlighter: pygments
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed
