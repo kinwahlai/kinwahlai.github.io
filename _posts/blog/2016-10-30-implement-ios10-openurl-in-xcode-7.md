@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Implement iOS10 openURL in Xcode 7"
+date: 2016-10-30T10:25:21-07:00
 modified:
 categories: blog
 excerpt:
