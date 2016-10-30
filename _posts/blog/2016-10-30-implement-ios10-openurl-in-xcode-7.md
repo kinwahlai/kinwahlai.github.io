@@ -16,19 +16,19 @@ My team released a version of our app before the iOS 10 is available. We have in
 
 After doing some searching on Google, I landed on Apple document about [What's New in iOS10](https://developer.apple.com/library/content/releasenotes/General/WhatsNewIniOS/Articles/iOS10.html) and then I notice that openURL function has been deprecated from iOS10.
 
-Oh no. what should I do now, I can't fix the previous version that is out there. I decided to make my 5.3 to use the right function "openURL:options:completionHandler:" for iOS10 and "openURL:" for iOS9.
+Oh no. what should I do now, I can't fix the previous version that is out there. I decided to make my 5.3 to use the right function `openURL:options:completionHandler:` for iOS10 and `openURL:` for iOS9.
 
 I think I should have pay more attention to the OS release and what's new in it and also the warnings when I compile our code. 😌
 
 I wanted to upgrade my code base to Swift3 and using Xcode 8, but it is time consuming and i need to replace the 5.3 now before everyone upgraded. Plus I still cant go to Xcode 8 and use swift 2.3 because some pod I use doesn't have 2.3 support. So in short, i'm stuck in Xcode 7.3.1 and swift 2.2 now.
 
-Xcode 7.3.1 doesn't have iOS10 SDK and it doesn't know there is a function "openURL:options:completionHandler:" in UIApplication. It failed when i try to compile and run.
+Xcode 7.3.1 doesn't have iOS10 SDK and it doesn't know there is a function `openURL:options:completionHandler:` in UIApplication. It failed when i try to compile and run.
 
-Let's try using "performSelector:withObject" but it doesn't work because the new function has more than 2 parameters. Since that doesn't work, i try to use NSInvocation invoke a method dynamically, but from what i know NSInvocation is not available in Swift. Well, time to go back to Objective-C. Luckily, it is not that hard.
+Let's try using `performSelector:withObject` but it doesn't work because the new function has more than 2 parameters. Since that doesn't work, i try to use NSInvocation invoke a method dynamically, but from what i know NSInvocation is not available in Swift. Well, time to go back to Objective-C. Luckily, it is not that hard.
 
 First, I need to create a new Objective-C class with name GoToURL and I will have the .h and .m files. Then I add the import statement to the Bridging-Header.h so that I can use the class in Swift environment. These are the simple steps.
 
-This class is like a kind of wrapper to the original iOS10 openURL. I add a class method to GoToURL class "openURL:options:completionHandler:". This class method is the statement to the iOS10 openURL method definition.
+This class is like a kind of wrapper to the original iOS10 openURL. I add a class method to GoToURL class `openURL:options:completionHandler:`. This class method is the statement to the iOS10 openURL method definition.
 
 ```obj-c
 #import <UIKit/UIKit.h>
@@ -57,7 +57,7 @@ Let's go to the detail implementation of the class method. Actually, there is no
 }
 ```
 
-I can now use the new class in Swift to handle openURL for iOS10. I going to use the `#available` attribute to allow me to use GoToURL.openURL for iOS10 and old openURL for iOS9.
+I can now use the new class in Swift to handle openURL for iOS10. I going to use the `#available` attribute to allow me to use `GoToURL.openURL` for iOS10 and old openURL for iOS9.
 
 ```swift
 public func upgradeNow() -> Bool {
