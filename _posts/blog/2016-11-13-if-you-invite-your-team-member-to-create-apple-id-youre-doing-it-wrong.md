@@ -30,6 +30,7 @@ In short, it stores all certificates and provision profiles for the shared Apple
 Using **match** with a new project is quite straightforward. I create a new Apple ID with a new shared email and a new empty repo for this purpose. I run this command `match init` at my project directory ![](https://github.com/fastlane/fastlane/raw/master/match/assets/match_init.gif)
 
 The command will create the Matchfile that looks like this
+
 ```ruby
 git_url "git@github:kinwahlai/certificates.git"
 type "development" # The default type, can be: appstore, adhoc or development

@@ -100,6 +100,7 @@ Another tip to build and run the app on iOS10 device using Xcode 7.
 *Prerequisites: You need to have Xcode 8 installed in the same machine*
 
 Open up a terminal, then type this command
+
 ```sh
 ln -s /Applications/Xcode\ 8.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/10.0\ \(14A345\)/ /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport
 ```
