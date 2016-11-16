@@ -13,17 +13,17 @@ date: 2016-11-13T17:37:11-08:00
 ---
 
 
-> I invite my new member to join the apple development team. He may need to create a new Apple id. Then he has to create a CSR to create a development cert and import into keychain access. He has to do all these before he can start development on actual device. On top of that, if he want/need to build adhoc or production ipa, then I need to share with him the distribution cert and provision.
+> I invite my new member to join the apple development team. He may need to create a new Apple ID. Then he has to create a CSR to create a development cert and import into keychain access. He has to do all this before he can start development on the actual device. On top of that, if he want/need to build adhoc or production ipa, then I need to share with him the distribution cert and provision.
 
-This is the typical scenario when a new member join my team. This is just the beginning. It may takes up to 30 mins ~ 1 hr if everything works fine. Usually, I face some problem with provision profile during the process.
+This is the typical scenario when a new member joins my team. This is just the beginning. It may take up to 30 mins ~ 1 hr if everything works fine. Usually, I face some problem with provision profile during the process.
 
-I found a new way to do it, which is using **match** in fastlane framework. Here is the snippet from [match website](https://github.com/fastlane/fastlane/tree/master/match)
+I found a new way to do it, which is using **match** in the fastlane framework. Here is the snippet from [match website](https://github.com/fastlane/fastlane/tree/master/match)
 
 > A new approach to iOS code signing: Share one code signing identity across your development team to simplify your codesigning setup and prevent code signing issues.
 >
->**match** is the implementation of the [https://codesigning.guide](https://codesigning.guide concept). match creates all required certificates & provisioning profiles and stores them in a separate git repository. Every team member with access to the repo can use those credentials for code signing. match also automatically repairs broken and expired credentials. It's the easiest way to share signing credentials across teams
+>**match** is the implementation of the [https://codesigning.guide](https://codesigning.guide) concept. Match creates all required certificates & provisioning profiles and stores them in a separate git repository. Every team member with access to the repo can use those credentials for code signing. Match also automatically repairs broken and expired credentials. It's the easiest way to share signing credentials across teams
 
-In short, it stores all certificates and provision profiles for the shared Apple ID account in a git repo. Then share those with everyone in the team.
+In short, it stores all certificates and provision profiles for the shared Apple ID account in a git repo. Then share this with everyone in the team.
 
 #### Using match with your new project
 
@@ -42,7 +42,7 @@ team_id "XYZ1234567"
 
 When I run the command `match` now:
 1. `git clone` repo to tmp folder, then ask you for password to decrypt the files in the repo because all files are encrypted before commit and push to repo.
-2. Check the certificates in repo for validity in Apple Developer portal, **match** will create new certificate if missing or expired. Then install the certificates into keychain access.
+2. Check the certificates in repo for validity in the Apple Developer portal, **match** will create a new certificate if missing or expired. Then install the certificates into keychain access.
 3. Install provision profiles.
 4. Set special environment variables, example sigh_com.kinwahlai.App_development, sigh_com.kinwahlai.App_development_team-id and etc
 
@@ -54,11 +54,11 @@ When I run the command `match` now:
 
 #### Make sure everyone is using the same provision profile
 
-Like I said before, I always has a problem with provision profile when setting up a new development environment. **match** creates special environment variables `sigh_<app bundle identifier>_<profile type>` for each profile type. Now I can modify my build setting's *provisiong profile* to use these special variable.
+Like I said before, I always suffer a problem with provision profile when setting up a new development environment. **match** creates special environment variables `sigh_<app bundle identifier>_<profile type>` for each profile type. Now I can modify my build setting's *provisiong profile* to use these special variable.
 ![](/images/match/fastlane-match.png)
 
 ###### New lane - certs_profiles
-My team can now use the new lane 'certs_profiles' to install the same set of certificates and provision profiles.
+My team can now utilize the new lane 'certs_profiles' to install the same set of certificates and provision profiles.
 
 ```ruby
 desc "Download and refresh provision profile (readonly)"
