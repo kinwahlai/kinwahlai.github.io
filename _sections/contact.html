@@ -1,22 +1,19 @@
 ---
-title: Contact
+title: Get in Touch
 icon: fa-envelope
-order: 4
+order: 5
 ---
 
-<p>Elementum sem parturient nulla quam placerat viverra
-mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
+<p>I'd love to connect and explore how I can support your growth journey!</p>
 
-<form method="post" action="https://formspree.io/{{ site.email }}">
-  <div class="row">
-    <div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
-    <div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
+<form method="post" action="{{ site.data.contact.formUrl }}" style="margin-top: 2em;">
+  <div class="row" style="row-gap: 1.5em;">
+    <div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" style="margin-bottom: 1em;" /></div>
+    <div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" style="margin-bottom: 1em;" /></div>
     <div class="12u$">
-      <textarea name="message" placeholder="Message"></textarea>
+      <textarea name="message" placeholder="Message" style="margin-bottom: 0;"></textarea>
     </div>
-    <div class="12u$">
+    <div class="12u$" style="margin-top: 1.5em;">
       <input type="submit" value="Send Message" />
     </div>
   </div>

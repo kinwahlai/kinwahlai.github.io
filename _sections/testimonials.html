@@ -1,0 +1,16 @@
+---
+title: Testimonials
+icon: fa-comment
+order: 4
+---
+
+<div class="row">
+  {% for testimonial in site.data.testimonials %}
+    <div class="4u 12u$(mobile)">
+      <div class="service-card">
+        <p class="testimonial-text">"{{ testimonial.testimonial }}"</p>
+        <h3 class="testimonial-author">{{ testimonial.name }}</h3>
+      </div>
+    </div>
+  {% endfor %}
+</div>
