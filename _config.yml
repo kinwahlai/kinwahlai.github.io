@@ -37,6 +37,9 @@ pinterest_url:
 slack_url:
 dribbble_url:
 
+#contact form action url
+form_url: https://formspree.io/f/meoaqygr
+
 # Google Analytics Tracking ID goes here:
 google_analytics:
 
