@@ -281,6 +281,17 @@
 			}
 		}
 
+		&.avatar64 {
+			width: 64px;
+			height: 64px;
+			background: #f00;
+
+			img {
+				width: 64px;
+				height: 64px;
+			}
+		}
+
 		&.fit {
 			display: block;
 			width: 100%;
