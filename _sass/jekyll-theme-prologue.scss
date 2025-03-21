@@ -713,7 +713,7 @@
 /* Main */
 
 	#main {
-		margin-left: 375px;
+		margin-left: 275px;
 		> section {
 			text-align: center;
 		}
@@ -1211,4 +1211,74 @@
 
 .debug-border {
 	border: 1px solid red;
+}
+
+/* Horizontal Header */
+#horizontal-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(34, 38, 41, 0.95);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  z-index: 1000;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+#horizontal-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+#horizontal-header .logo {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#horizontal-header .logo a {
+  color: #fff;
+  border-bottom: none;
+}
+
+.horizontal-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.horizontal-nav li {
+  margin: 0 0 0 1.5em;
+}
+
+.horizontal-nav a {
+  color: rgba(255, 255, 255, 0.7);
+  border-bottom: none;
+  font-size: 0.8em;
+  transition: color 0.2s ease;
+}
+
+.horizontal-nav a:hover {
+  color: #fff;
+}
+
+/* Adjust main content to accommodate horizontal header */
+#main {
+  padding-top: 60px;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 736px) {
+  #horizontal-header {
+    display: none; /* Hide on mobile where the toggle is shown */
+  }
+  
+  #main {
+    padding-top: 0;
+  }
 }

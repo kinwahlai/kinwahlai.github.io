@@ -1,0 +1,15 @@
+<div id="horizontal-header">
+  <div class="container">
+    <div class="logo">
+      <a href="{{site.baseurl}}/">{{site.title}}</a>
+    </div>
+    <nav class="horizontal-nav">
+      <ul>
+        {% assign sections = site.sections | sort: 'order' %}
+        {% for section in sections %}
+          <li><a href="#{{section.title | slugify}}">{{section.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</div>
