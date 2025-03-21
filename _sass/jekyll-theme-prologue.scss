@@ -136,6 +136,11 @@
 		> p {
 			margin: 1em 0 0 0;
 		}
+
+		> h1 {
+			font-size: 4em;
+			text-align: left;
+		}
 	}
 
 	footer {
@@ -1160,4 +1165,19 @@
 .no-bullets {
 	list-style: none;
 	padding-left: 0;
+}
+
+.image-container {
+	.limited-height {
+		max-height: 600px;
+  	overflow: hidden;
+	}
+	.limited-height img {
+		height: 600px;
+		object-fit: fill;
+	}
+}
+
+.debug-border {
+	border: 1px solid red;
 }
