@@ -1,10 +1,61 @@
 ---
-title: About Me
+title: Meet Your Coach
 icon: fa-user
+auto-header: none
 order: 3
 ---
 
-<a href="#" class="image featured"><img src="assets/images/pic08.jpg" alt="" /></a>
+<div class="row">
+  <div class="5u 12u$(mobile)">
+    <div class="sticky-image">
+      <span class="image fit"><img src="assets/images/potrait.webp" alt="Coach Portrait" /></span>
+    </div>
+  </div>
+  <div class="7u$ 12u$(mobile)">
+    <div class="coach-info">
+      <div class="info-section">
+        <h3>About Me</h3>
+        <p>A Certified Satir CMP coach and trainer-in-training, I offer over 15 years of leadership and software development experience gained across 4 countries. With an attentive and compassionate approach, I help individuals achieve personal and professional growth.</p>
+      </div>
+      
+      <div class="info-section">
+        <h3>My Mission</h3>
+        <p>I'm dedicated to helping people cultivate self-awareness, strengthen relationships, and foster inner peace. My goal is to create a safe space where clients can explore challenges, discover insights, and develop practical tools for lasting transformation.</p>
+      </div>
+      
+      <div class="info-section">
+        <h3>My Journey</h3>
+        <p>My path to coaching began through my own personal growth journey. After experiencing the profound impact of the Satir Model in my life, I became passionate about sharing these transformative tools with others to help them navigate their unique challenges.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>A Certified Satir CMP coach and trainer-in-training, offers over 15 years of leadership and software development experience gained across 4 countries. 
-  With an attentive and compassionate approach, I help individuals to achieve personal and professional growth by cultivating self-awareness, strengthening relationships, and fostering inner peace.</p>
+<style>
+  .sticky-image {
+    position: sticky;
+    top: 100px;
+  }
+
+  .coach-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  
+  .info-section {
+    padding-bottom: 1em;
+  }
+  
+  .info-section h3 {
+    color: #4c5c96;
+    margin-bottom: 0.5em;
+    position: relative;
+  }
+  
+  @media screen and (max-width: 736px) {
+    .coach-info {
+      margin-top: 1.5em;
+    }
+  }
+</style>
