@@ -2,6 +2,8 @@
 /// @param {string} $where Optional pseudoelement to target (before or after).
 /// @param {string} $style Which font to use (solid, regular, or brands).
 /// @param {string} $content Optional content value to use.
+@use "sass:math";
+
 @mixin icon($where: before, $style: solid, $content: false) {
 
 	text-decoration: none;
@@ -121,7 +123,7 @@
 @mixin flexgrid-columns($columns) {
 
 	> * {
-		$cell-width: 100% / $columns;
+		$cell-width: math.div(100%, $columns);
 		width: #{$cell-width};
 	}
 
@@ -134,7 +136,7 @@
 
 	// Apply padding.
 		> * {
-			$cell-width: 100% / $columns;
+			$cell-width: math.div(100%, $columns);
 
 			padding: ($gutters * 0.5);
 			width: $cell-width;
@@ -149,8 +151,8 @@
 
 	// Apply padding.
 		> * {
-			$cell-width: 100% / $columns;
-			$cell-width-pad: $gutters / $columns;
+			$cell-width: math.div(100%, $columns);
+			$cell-width-pad: math.div($gutters, $columns);
 
 			padding: ($gutters * 0.5);
 			width: calc(#{$cell-width} + #{$cell-width-pad});
@@ -177,8 +179,8 @@
 	// Adjust widths of leftmost and rightmost cells.
 		> :nth-child(#{$columns}n + 1),
 		> :nth-child(#{$columns}n) {
-			$cell-width: 100% / $columns;
-			$cell-width-pad: ($gutters / $columns) - ($gutters / 2);
+			$cell-width: math.div(100%, $columns);
+			$cell-width-pad: math.div($gutters, $columns) - ($gutters * 0.5);
 
 			width: calc(#{$cell-width} + #{$cell-width-pad});
 		}
@@ -194,8 +196,8 @@
 
 	// Apply padding.
 		> * {
-			$cell-width: 100% / $prev-columns;
-			$cell-width-pad: $gutters / $prev-columns;
+			$cell-width: math.div(100%, $prev-columns);
+			$cell-width-pad: math.div($gutters, $prev-columns);
 
 			padding: ($gutters * 0.5);
 			width: calc(#{$cell-width} + #{$cell-width-pad});
@@ -222,8 +224,8 @@
 	// Adjust widths of leftmost and rightmost cells.
 		> :nth-child(#{$prev-columns}n + 1),
 		> :nth-child(#{$prev-columns}n) {
-			$cell-width: 100% / $columns;
-			$cell-width-pad: $gutters / $columns;
+			$cell-width: math.div(100%, $columns);
+			$cell-width-pad: math.div($gutters, $columns);
 
 			padding: ($gutters * 0.5);
 			width: calc(#{$cell-width} + #{$cell-width-pad});
