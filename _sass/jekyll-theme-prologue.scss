@@ -1111,3 +1111,39 @@
 .mobile-menu-panel a:hover {
   color: #7eaeac;
 }
+
+/* Change these selectors to be more specific */
+.post-navigation {
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+}
+
+.post-navigation.bottom {
+	margin-top: 3em;
+	margin-bottom: 0;
+	padding-top: 1.5em;
+	border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Make button styles only apply inside post-navigation */
+.post-navigation .back-button {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.5em 1em;
+	background-color: #7eaeac;
+	color: white;
+	border-radius: 4px;
+	transition: background-color 0.2s ease;
+	font-size: 0.9em;
+	text-decoration: none;
+	border: none;
+}
+
+.post-navigation .back-button i {
+	margin-right: 0.5em;
+}
+
+.post-navigation .back-button:hover {
+	background-color: #6d9b99;
+	color: white;
+}
