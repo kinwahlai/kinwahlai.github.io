@@ -1,9 +1,11 @@
 ---
 title: Testimonials
 icon: fa-comment
+auto-header: What Clients Say
 order: 4
 ---
 {% assign samples = site.data.testimonials | sample: 3 %}
+
 <div class="row">
   {% for testimonial in samples %}
     <div class="12u$(mobile)">

@@ -1,0 +1,14 @@
+main:
+  - name: "Services"
+    url: "#services"
+    weight: 2
+  - name: "Meet Your Coach"
+    url: "#meet-your-coach"
+    weight: 3
+  - name: "Testimonials"
+    url: "#testimonials"
+    weight: 4
+  - name: "Get In Touch"
+    url: "#get-in-touch"
+    weight: 5
+

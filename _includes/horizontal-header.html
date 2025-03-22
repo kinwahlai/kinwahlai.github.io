@@ -7,12 +7,20 @@
       <a href="{{ site.baseurl }}/"><img alt="{{ site.title }}" src="{{ 'assets/images/square.svg' | relative_url }}" /></a>
     </div>
     <nav class="horizontal-nav">
+      {% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
       <ul>
+        {% for item in mainmenu %}
+        <li class="{% if item.url == page.url %}active{% endif %}">
+          <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <!-- <ul>
         {% assign sections = site.sections | sort: 'order' %}
         {% for section in sections %}
           <li><a href="#{{section.title | slugify}}">{{section.title}}</a></li>
         {% endfor %}
-      </ul>
+      </ul> -->
     </nav>
   </div>
 </div>
