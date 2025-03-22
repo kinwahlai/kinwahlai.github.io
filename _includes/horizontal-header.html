@@ -1,13 +1,16 @@
 <div id="horizontal-header">
   <div class="container">
+    <!-- Logo section remains unchanged -->
     <div class="logo">
       <a href="{{ site.baseurl }}/"><img alt="{{ site.title }}" src="{{ 'assets/images/Retangular.svg' | relative_url }}" /></a>
     </div>
     <div class="logo-mobile">
       <a href="{{ site.baseurl }}/"><img alt="{{ site.title }}" src="{{ 'assets/images/square.svg' | relative_url }}" /></a>
     </div>
-    <nav class="horizontal-nav">
-      {% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
+    
+    <!-- Desktop navigation - visible on larger screens -->
+    <nav class="horizontal-nav desktop-only">
+      {% assign mainmenu = site.data.menus.main | sort: 'weight' %}
       <ul>
         {% for item in mainmenu %}
         <li class="{% if item.url == page.url %}active{% endif %}">
@@ -15,12 +18,28 @@
         </li>
         {% endfor %}
       </ul>
-      <!-- <ul>
-        {% assign sections = site.sections | sort: 'order' %}
-        {% for section in sections %}
-          <li><a href="#{{section.title | slugify}}">{{section.title}}</a></li>
-        {% endfor %}
-      </ul> -->
     </nav>
+    
+    <!-- Mobile menu toggle button - only visible on mobile -->
+    <div class="mobile-menu-toggle mobile-only">
+      <a href="#mobile-menu" class="toggle">
+        <span class="fa fa-bars"></span>
+      </a>
+    </div>
   </div>
+</div>
+
+<!-- Mobile navigation panel - hidden by default -->
+<div id="mobile-menu" class="mobile-menu-panel">
+  <nav>
+    <a href="#" class="close-mobile-menu"><span class="fa fa-times"></span></a>
+    {% assign mainmenu = site.data.menus.main | sort: 'weight' %}
+    <ul>
+      {% for item in mainmenu %}
+      <li class="{% if item.url == page.url %}active{% endif %}">
+        <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
 </div>
