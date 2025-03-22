@@ -57,7 +57,7 @@
 		)
 	));
 
-.service-card {
+.testimonial-card {
     text-align: center;
     padding: 2em 1.5em;
     border-radius: 8px;
@@ -74,18 +74,8 @@
 	}
 }
 
-.service-card:hover {
+.testimonial-card:hover {
     transform: translateY(-5px);
-}
-
-.service-icon {
-    margin-bottom: 1.5em;
-}
-
-.service-icon img {
-    height: 160px;
-    width: 160px;
-    fill: #4c5c96;
 }
 
 /* Basic */
