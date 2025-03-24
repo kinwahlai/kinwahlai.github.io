@@ -1,36 +1,58 @@
 ---
-title: Meet Your Coach
+title: Meet Darren Lai
 icon: fa-user
-auto-header: Meet Your Coach
+auto-header: Meet Darren Lai
 order: 3
 ---
 
-<div class="row">
-  <div class="col-5 col-12-mobile">
-    <span class="image fit"><img src="{{ 'assets/images/potrait.webp' | relative_url }}" alt="Coach Portrait" /></span>
-  </div>
-  <div class="col-7 col-12-mobile">
-    <div class="coach-info">
-      <div class="info-section">
-        <h3>About Me</h3>
-        <p>As a Certified Satir CMP coach and trainer-in-training, I offer over 15 years of leadership and software development experience gained across 4 countries. With an attentive and compassionate approach, I help individuals achieve personal and professional growth.</p>
-      </div>
+<div class="about-me-container">
+  <!-- First row: Photo | About Me + Journey -->
+  <div class="row">
+    <!-- Photo column -->
+    <div class="col-5 col-12-mobile">
+      <span class="image fit"><img src="{{ 'assets/images/potrait.webp' | relative_url }}" alt="Coach Portrait" /></span>
+    </div>
+    
+    <!-- Right column with About Me and Journey -->
+    <div class="col-7 col-12-mobile">
+      <div class="top-sections">
+        <div class="info-section">
+          <h3>About Me</h3>
+          <p>As a Certified Satir CMP coach and trainer-in-training, I have over 15 years of leadership and software development experience gained across 4 countries, in 3 continents. With an attentive and compassionate approach, I help individuals achieve personal and professional growth.</p>
+        </div>
 
-      <div class="info-section">
-        <h3>My Journey</h3>
-        <p>My path to coaching began through my own personal growth journey. After experiencing the profound impact of the Satir Model in my life, I became passionate about sharing these transformative tools with others to help them navigate their unique challenges.</p>
+        <div class="info-section">
+          <h3>My Journey</h3>
+          <p>My path to coaching began through my own personal growth journey. After experiencing the profound impact of the Satir Model in my life, I became passionate about sharing these transformative tools with others to help them navigate their unique challenges.</p>
+        </div>
       </div>
-      
+    </div>
+  </div>
+  
+  <!-- Second row: Mission and Vision -->
+  <div class="row" style="margin-top: 1.0em;">
+    <div class="col-6 col-12-mobile">
       <div class="info-section">
         <h3>My Mission</h3>
-        <p>I'm dedicated to helping people cultivate self-awareness, strengthen relationships, and foster inner peace. My goal is to create a safe space where clients can explore challenges, discover insights, and develop practical tools for lasting transformation.</p>
+        <p>I'm dedicated to helping people cultivate self-awareness, strengthen relationships, and foster inner peace.</p>
+      </div>
+    </div>
+    
+    <div class="col-6 col-12-mobile">
+      <div class="info-section">
+        <h3>My Vision</h3>
+        <p>To create a safe space where clients can explore challenges, discover insights, and develop practical tools for lasting transformation.</p>
       </div>
     </div>
   </div>
 </div>
 
 <style>
-  .coach-info {
+  .about-me-container {
+    margin-bottom: 0;
+  }
+  
+  .top-sections {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
@@ -47,8 +69,12 @@ order: 3
   }
   
   @media screen and (max-width: 736px) {
-    .coach-info {
+    .top-sections {
       margin-top: 1.5em;
+    }
+    
+    .row + .row {
+      margin-top: 0;
     }
   }
 </style>

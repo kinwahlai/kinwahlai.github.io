@@ -2,8 +2,8 @@ main:
   - name: "Services"
     url: "#services"
     weight: 2
-  - name: "Meet Your Coach"
-    url: "#meet-your-coach"
+  - name: "Meet Darren Lai"
+    url: "#meet-darren-lai"
     weight: 3
   - name: "Testimonials"
     url: "#testimonials"

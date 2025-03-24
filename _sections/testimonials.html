@@ -10,7 +10,7 @@ order: 4
   {% for testimonial in samples %}
     <div class="col-12-mobile">
       <div class="testimonial-card">
-        <h3 class="testimonial-author">{{ testimonial.name }}</h3>
+        <h3 class="testimonial-author">{{ testimonial.name }} - {{ testimonial.country }}</h3>
         <p class="testimonial-text">"{{ testimonial.testimonial }}"</p>
       </div>
     </div>
