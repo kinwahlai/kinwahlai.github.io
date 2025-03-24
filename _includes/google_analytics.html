@@ -4,5 +4,19 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', '{{- site.google_analytics -}}');
+  gtag('config', '{{- site.google_analytics -}}', {
+    'anonymize_ip': true,
+    'cookie_flags': 'SameSite=None;Secure',
+    'send_page_view': true
+  });
+  
+  // Track outbound links
+  document.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A' && e.target.getAttribute('href').indexOf('http') === 0) {
+      gtag('event', 'click', {
+        'event_category': 'outbound',
+        'event_label': e.target.getAttribute('href')
+      });
+    }
+  });
 </script>

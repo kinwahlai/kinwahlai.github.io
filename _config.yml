@@ -41,7 +41,7 @@ dribbble_url:
 form_url: https://formspree.io/f/meoaqygr
 
 # Google Analytics Tracking ID goes here:
-google_analytics: G-CRDXDEGMPY
+google_analytics: 'G-ECREK99M7R'
 
 # The following settings are NECESSARY for the Prologue theme to work correctly:
 theme: jekyll-theme-prologue
