@@ -198,7 +198,7 @@
         outline: 0;
 
         &:hover {
-            color: #E27689;
+            color: #7eaeac;
             border-bottom-color: rgba(255, 255, 255, 0);
         }
     }
@@ -898,41 +898,6 @@
     color: #7eaeac;
 }
 
-/* Post Navigation */
-.post-navigation {
-    margin-top: 1em;
-    margin-bottom: 1.5em;
-}
-
-.post-navigation.bottom {
-    margin-top: 3em;
-    margin-bottom: 0;
-    padding-top: 1.5em;
-    border-top: 1px solid rgba(0,0,0,0.1);
-}
-
-.post-navigation .back-button {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.5em 1em;
-    background-color: #7eaeac;
-    color: white;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
-    font-size: 0.9em;
-    text-decoration: none;
-    border: none;
-}
-
-.post-navigation .back-button i {
-    margin-right: 0.5em;
-}
-
-.post-navigation .back-button:hover {
-    background-color: #6d9b99;
-    color: white;
-}
-
 /* Utility */
 .debug-border {
     border: 1px solid red;
@@ -1198,6 +1163,41 @@
         
         @include breakpoints.breakpoint('<=mobile') {
             max-width: 100%;
+        }
+    }
+
+    /* Post Navigation */
+    .post-navigation {
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+    
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.3em 0.5em;  // Reduced padding
+            color: #888;
+            border-radius: 3px;
+            transition: color 0.2s ease;
+            font-size: 0.75em;     // Smaller font size
+            text-decoration: none;
+            border: none;
+            background: none;
+    
+            i {
+                margin-right: 0.3em;  // Reduced margin
+                font-size: 0.85em;    // Slightly smaller icon
+            }
+    
+            &:hover {
+                color: #7eaeac;
+            }
+        }
+    
+        &.bottom {
+            margin-top: 3em;
+            margin-bottom: 0;
+            padding-top: 1.5em;
+            border-top: 1px solid rgba(0,0,0,0.1);
         }
     }
 }
