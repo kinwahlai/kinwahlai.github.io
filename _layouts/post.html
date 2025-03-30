@@ -7,23 +7,28 @@ layout: default
 <div id="main">
     <!-- Post -->
     <article class="shade-two">
-      <div class="container">
+        <div class="container">
             <div class="post-navigation">
                 <a href="{{ site.baseurl }}/blog/" class="back-button">
                     <i class="fa fa-arrow-left"></i> Back to Posts
                 </a>
             </div>
             <header>
+                {%- if page.cover-photo and page.cover-photo-alt -%}
+                <div class="cover-image">
+                    <img src="{{- page.cover-photo | relative_url -}}" alt="{{ page.cover-photo-alt }}">
+                </div>
+                {% endif %}
                 <h2>{{- page.title -}}</h2>
                 <p>{% if page.author %}{{ page.author }}, {% endif %}{{- page.date | date_to_long_string -}}</p>
             </header>
-        {{- content -}}
-            
+            {{- content -}}
+
             <div class="post-navigation bottom">
                 <a href="{{ site.baseurl }}/blog/" class="back-button">
                     <i class="fa fa-arrow-left"></i> Back to Posts
                 </a>
             </div>
-      </div>
+        </div>
     </article>
 </div>
