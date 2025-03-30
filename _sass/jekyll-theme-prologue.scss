@@ -1164,3 +1164,43 @@
                 }
             }
     }
+
+.blog-post {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .cover-image {
+        width: 100%;      // Changed from auto to 100%
+        height: auto;
+        display: block;
+        margin: 0 0 2em 0;
+        
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        @include breakpoints.breakpoint('<=mobile') {
+            margin-bottom: 1em 0;
+        }
+    }
+
+    .post-image {
+        width: 100%;      // Make it responsive
+        margin: 2em 0; // Center the image
+        
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        @include breakpoints.breakpoint('<=mobile') {
+            max-width: 100%;
+        }
+    }
+}
+
+
+

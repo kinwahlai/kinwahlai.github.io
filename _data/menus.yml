@@ -11,4 +11,7 @@ main:
   - name: "Get In Touch"
     url: "#get-in-touch"
     weight: 5
+  - name: "Blogs"
+    url: "/blog"
+    weight: 6
 
