@@ -34,7 +34,6 @@ author: Darren Lai
 excerpt: To be added
 cover-photo:
 cover-photo-alt:
-excerpt:
 ---
 
 EOF
