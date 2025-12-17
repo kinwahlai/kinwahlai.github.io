@@ -9,4 +9,6 @@ cover-photo-alt:
 excerpt: I walked into a new role thinking I could be a partner. But partnership requires two people willing to be influenced by each other. I tried being nice. But my niceness wasn't landing. So I found myself performing—smiling while something in me recoiled. Neither option was me.
 ---
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7406992651109146624" height="1783" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<div style="display: flex; justify-content: center;">
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7406992651109146624" height="1783" width="800" frameborder="0" allowfullscreen="" title="Embedded post" style="max-width: 100%;"></iframe>
+</div>
