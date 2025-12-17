@@ -31,9 +31,9 @@ title: "$TITLE"
 date: $(date +"%Y-%m-%d %H:%M:%S %z")
 categories: Satir
 author: Darren Lai
-excerpt: To be added
 cover-photo:
 cover-photo-alt:
+excerpt: To be added
 ---
 
 EOF

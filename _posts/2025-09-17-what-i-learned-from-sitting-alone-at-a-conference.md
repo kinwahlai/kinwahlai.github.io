@@ -4,7 +4,6 @@ title: "What I Learned from Sitting Alone at a Conference"
 date: 2025-09-17 10:19:19 +0800
 categories: Satir
 author: Darren Lai
-excerpt: To be added
 cover-photo:
 cover-photo-alt:
 excerpt: I sat in a circle of empty chairs at an open space session during the Shanghai Regional Scrum Gathering. The facilitator hadn't shown up. Everyone else had moved to busier sessions. I stayed. Something about those empty chairs felt like possibility...
